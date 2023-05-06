@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(46, 75, 87);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-col {
+    background-color: rgb(26, 49, 63);
+    height: 100vh;
+    width: 15%;
+}
+
+.middle-col {
+    margin-top: 5%;
+    width: 60%;
+}
+
+
+.song-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 4vh;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 5px 20px;
+    background-color: #e1dcdc;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px rgb(34, 54, 67);
+}
+
+.new-song {
+    margin: 20vh 0px;
+}
+
+.search-bar {
+    width: 50%;
+    height: 4vh;
+    border-radius: 15px;
+    /* box-shadow: 5px 5px 5px rgb(147, 147, 147); */
+    margin: 3vh auto;
+}
+
+.search-input {
+    padding: 3px 10px;
+    outline: none;
+    border: none;
+    width: 90%;
+    display: inline;
+    border-radius: 15px;
+    height: 4vh;
+    transition: all 2s linear;
+}
+
+.title {
+    flex-grow: 4;
+    margin-left: 4%;
+    font-size: 1em;
+}
+
+.artist {
+    flex-grow: 1;
+}
+
+.album {
+    flex-grow: 1;
+}
+
+.queue {
+    background-color: #dedddd;
+    position: fixed;
+    width: 20%;
+    height: 40vh;
+    top: 5vh;
+    right: 5vw;
+    box-shadow: 20px 20px 4px rgb(28, 47, 59);
+    overflow-y: scroll;
+    border-radius: 5px;
+}
+
+.queue > ul {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.queue > h4 {
+    padding-left: 10px;
+    line-height: 1em;
+}
+
+.queue-song {
+    list-style-type: none;
+    line-height: 2em;
+    border: 1px #000 solid;
+    width: 100%;
+    padding: 5px;
+}
+
+
+.song-playing {
+    position: fixed;
+    bottom: 10vh;
+    right: 5vw;
+    width: 20%;
+    box-shadow: 20px 20px 4px rgb(28, 47, 59);
+}
+
+.song-playing > img {
+    width: 100%;
+}
+
+.new-song {
+    margin: 20vh auto;
+    width: 80%;
+}
+
+.new-song > input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    width: 20%;
+    line-height: 2em;
+}

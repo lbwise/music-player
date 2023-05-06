@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7a047a0631.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <main>
+        <div id="nav" class="left-col"></div>
+        <div class="middle-col">
+            <section class="song-list" id="song-list">
+                <div class="search-bar" id="search-bar">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search">
+                    <i id="search-icon" style="color: #fff" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <!-- <input type="text" class="search-bar" placeholder="Search..."> -->
+                <song-item></song-item>
+                <div class="song-row">
+                    <h3 class="title">The View From the Afternoon</h3>
+                    <p class="album">Melt Your Eyez...</p>
+                    <p class="artist">Arctic Monkeys</p>
+                </div>
+                <div class="song-row">
+                    <h3 class="title">Stressed Out</h3>
+                    <p class="album">Melt Your Eyez...</p>
+                    <p class="artist">A Tribe called Quest</p>
+                </div>
+                <div class="song-row">
+                    <h3 class="title">X-Wind</h3>
+                    <p class="album">Melt Your Eyez...</p>
+                    <p class="artist">Denzel Curry</p>
+                </div>
+                <div class="song-row">
+                    <h3 class="title">X-Wind</h3>
+                    <p class="album">Melt Your Eyez...</p>
+                    <p class="artist">Denzel Curry</p>
+                </div>
+            </section>
+            <section class="new-song">
+                <label for="song">Song</label>
+                <input type="text" name="song" id="song">
+                <label for="artist">Artist</label>
+                <input type="text" name="artist" id="artist">
+                <label for="album">Album</label>
+                <input type="text" name="album" id="album">
+                <button id="submit-song" onclick="addNewSong">Add</button>
+            </section>
+        </div>
+        <div class="right-col"></div>
+            <section class="queue">
+                <h4>Good News</h4>
+                <ul>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                    <li class="queue-song">Song</li>
+                </ul>
+            </section>
+            <section class="song-playing">
+                <img class="song-img" src="./assets/circles.png">
+            </section>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script type="module" src="./js/index.js"></script>
+</html>
+
