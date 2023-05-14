@@ -1,0 +1,27 @@
+<template id="new-song">
+    <section class="new-song">
+        <label for="song">Song</label>
+        <input type="text" name="song" class="song">
+        <label for="artist">Artist</label>
+        <input type="text" name="artist" class="artist">
+        <label for="album">Album</label>
+        <input type="text" name="album" class="album">
+        <button id="submit-song">Add</button>
+    </section>
+    <style>
+    .new-song {
+        margin: 20vh auto;
+        width: 80%;
+        color: white;
+    }
+
+    .new-song > input {
+        padding: 5px;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        width: 20%;
+        line-height: 2em;
+    }
+    </style>
+</template>

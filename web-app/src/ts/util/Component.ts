@@ -2,21 +2,18 @@ export class Component extends HTMLElement {
 
     constructor(name) {
         super();
-        this.attachShadow({ mode: 'open' });
+        const template: HTMLTemplateElement = document.querySelector('#' + name);
+        console.log(template);
+        const shadowRoot = this.attachShadow({ mode: 'open' });
+        shadowRoot.appendChild(template.content.cloneNode(true));
     }
 
     connectedCallback() {
-        this.render();
         this.hydrate();
     }
 
     attributeChangedCallback(name, oldValue, newValue) {
         this.shadowRoot.querySelector('.' + name).innerHTML = newValue; 
-    }
-
-    render() {
-        // const template = this.shadowRoot.firstChild as HTMLTemplateElement;
-        this.shadowRoot.innerHTML = '';
     }
 
     hydrate() {
