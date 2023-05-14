@@ -17,38 +17,15 @@
                     <input type="text" id="search-input" class="search-input" placeholder="Search">
                     <i id="search-icon" style="color: #fff" class="fa-solid fa-magnifying-glass"></i>
                 </div>
-                <!-- <input type="text" class="search-bar" placeholder="Search..."> -->
-                <song-item></song-item>
-                <div class="song-row">
-                    <h3 class="title">The View From the Afternoon</h3>
-                    <p class="album">Melt Your Eyez...</p>
-                    <p class="artist">Arctic Monkeys</p>
-                </div>
-                <div class="song-row">
-                    <h3 class="title">Stressed Out</h3>
-                    <p class="album">Melt Your Eyez...</p>
-                    <p class="artist">A Tribe called Quest</p>
-                </div>
-                <div class="song-row">
-                    <h3 class="title">X-Wind</h3>
-                    <p class="album">Melt Your Eyez...</p>
-                    <p class="artist">Denzel Curry</p>
-                </div>
-                <div class="song-row">
-                    <h3 class="title">X-Wind</h3>
-                    <p class="album">Melt Your Eyez...</p>
-                    <p class="artist">Denzel Curry</p>
-                </div>
+
+            <section>
+                <song-item title="Stressed Out" artist="A Tribe Called Quest" album="Midnight Marauders"></song-item>
+                <song-item title="X-Wing" artist="Denzel Curry" album="Melt My Eyez..."></song-item>
+                <song-item title="The View From The Afternoon" artist="Arctic Monkeys" album="Whatever they say I am"></song-item>
+                <song-item title="The View From The Afternoon" artist="Arctic Monkeys" album="Whatever they say I am"></song-item>
             </section>
-            <section class="new-song">
-                <label for="song">Song</label>
-                <input type="text" name="song" id="song">
-                <label for="artist">Artist</label>
-                <input type="text" name="artist" id="artist">
-                <label for="album">Album</label>
-                <input type="text" name="album" id="album">
-                <button id="submit-song" onclick="addNewSong">Add</button>
-            </section>
+            
+            <new-song/>
         </div>
         <div class="right-col"></div>
             <section class="queue">
@@ -82,7 +59,6 @@
         </div>
     </main>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
-<script type="module" src="./js/index.js"></script>
+<script type="module" src="./js/index.js" crossorigin="anonymous"></script>
 </html>
 

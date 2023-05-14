@@ -16,7 +16,7 @@ func getSongs(rw http.ResponseWriter, r *http.Request)  {
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/api/songs", getSongs)
+	mux.HandleFunc("/api/v1/songs", getSongs)
 
 	handler := cors.Default().Handler(mux)
 	http.ListenAndServe(":8080", handler)
