@@ -1,23 +1,17 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
-	"net/http"
-	"github.com/rs/cors"
+	s "github.com/lbwise/music-player/api/server"
 )
 
-func getSongs(rw http.ResponseWriter, r *http.Request)  {
-	fmt.Println(r.Header["Access-Control-Allow-Origin"])
-	content, _ := ioutil.ReadFile("./db.json")
-	fmt.Println("HIT SERVER")
-	rw.Write(content)
+func main() {
+	server := s.NewServer()
+	api := server.NewGroup("/api/v1")
+	createApiRoutes(api)	
+	server.GET("*", notFoundRoute)
+	server.Run(":8080")
 }
 
-func main() {
-	mux := http.NewServeMux()
-	mux.HandleFunc("/api/v1/songs", getSongs)
-
-	handler := cors.Default().Handler(mux)
-	http.ListenAndServe(":8080", handler)
+func notFoundRoute(p *s.Packet) {
+	p.WriteString("Unable to find what you were looking for. :(", 404)
 }

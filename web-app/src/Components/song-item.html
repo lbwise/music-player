@@ -1,9 +1,13 @@
 <template id="song-item">
     <div class="song-row">
-        <h3 class="title"></h3>
-        <p class="album"></p>
-        <p class="artist"></p>
+        <h3 id="title" class="title">/* console.log('testing') */</h3>
+        <p id="album" class="album"></p>
+        <p id="artist" class="artist"></p>
     </div>
+    <script defer>
+        const title = getProps('title');
+        console.log(title);
+    </script>
     <style>
     .song-row {
         display: flex;
